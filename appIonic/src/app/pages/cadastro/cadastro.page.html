@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novo Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (submit)="sendForm(f)">
+
+    <div class="ion-padding">
+      <ion-label position="stacked" color="primary">
+        Nome:
+      </ion-label>
+      <ion-input name="name" type="text" [(ngModel)]="nome"></ion-input>
+    </div>
+
+    <div class="ion-padding">
+      <ion-label position="stacked" color="primary">
+        Telefone:
+      </ion-label>
+      <ion-input name="phone" type="tel" [(ngModel)]="telefone"></ion-input>
+    </div>
+
+    <div class="ion-padding">
+      <ion-label position="stacked" color="primary">
+        Data de Nascimento:
+      </ion-label>
+      <ion-input name="dob" type="date" [(ngModel)]="dataNascimento"></ion-input>
+    </div>
+
+    <div class="ion-padding">
+      <ion-label position="stacked" color="primary">
+        Endereço:
+      </ion-label>
+      <ion-input name="address" type="text" [(ngModel)]="endereco"></ion-input>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button type="submit" expand="block" name="buttonLogin">
+        <ion-icon name="play-outline"></ion-icon>
+        Enviar
+      </ion-button>
+    </div>
+
+  </form>
+</ion-content>
